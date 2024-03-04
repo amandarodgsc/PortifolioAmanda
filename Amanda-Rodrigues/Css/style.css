@@ -96,6 +96,7 @@ a {
 
 section {
     padding: 120px 19% 100px;
+    
 }
 
 .home {
@@ -107,6 +108,10 @@ section {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-top: -300px; /* Move o conteúdo para cima */
+    margin-bottom: 7%;
+
+
 }
 
 
@@ -163,12 +168,8 @@ header.sticky{
     gap: 4rem;
 }
 
-.sobreimg img{
-    width: 100%;
-    height: auto;
-
-}
 .sobre-texto h5{
+
     font-size: 22px;
     margin-bottom: 20px;
     line-height: 1.4;
@@ -345,6 +346,8 @@ span{
     margin: 50px;
     padding: 50px;
     display:flex;
+    margin-top: 300px; /* Move o conteúdo para cima */
+
   }
   .footer li {
     list-style:none;
@@ -1028,11 +1031,12 @@ span{
 /*Card*/
 
 .wrapper{
-  font-family: 'poppins',sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 200px; /* Move o conteúdo para cima */
+
   
 }
 
@@ -1040,6 +1044,8 @@ span{
   font-size: 3em;
   color: #fff;
   margin: 25px;
+  font-family: 'Dosis', sans-serif;
+
 }
 .content-box{
   display: flex;
@@ -1140,4 +1146,140 @@ span{
       min-width: 300px;
       margin: 10px auto;
   }
+}
+
+/*Imagem sobre */
+
+.ring {
+  position: relative;
+  width: 70%; /* Largura ajustada para ser responsiva */
+  max-width: 300px; /* Largura máxima definida */
+  height: auto; /* Altura ajustada automaticamente para manter a proporção */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40%; /* Margem esquerda ajustada para centralizar */
+  margin-top: 0%;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha completamente o contêiner */
+}
+
+.ring i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  transition: 0.5s;
+}
+
+.ring i:nth-child(2) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate 4s linear infinite;
+}
+
+.ring i:nth-child(3) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate2 10s linear infinite;
+}
+
+.ring i {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%; /* Torna os elementos circulares */
+  border: 2px solid #fff;
+  transition: 0.5s;
+}
+
+.ring i:nth-child(1) {
+  animation: animate 6s linear infinite;
+}
+
+.ring i:nth-child(2) {
+  animation: animate 4s linear infinite;
+}
+
+.ring i:nth-child(3) {
+  animation: animate2 10s linear infinite;
+}
+
+.ring:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide a largura em duas colunas */
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 30px; /* Adiciona espaço abaixo do texto */
+}
+
+.ring {
+  position: relative;
+  width: 70%; /* Largura ajustada para ser responsiva */
+  max-width: 280px; /* Largura máxima definida */
+  height: auto; /* Altura ajustada automaticamente para manter a proporção */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 80%;
+  height: 80%;
+  border-radius: 60%;
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha completamente o contêiner */
+}
+
+.sobre-texto {
+  color: #fff;
+  margin-bottom: 30px; /* Adiciona espaço abaixo do texto */
+}
+
+.sobre-texto h2 {
+  font-family: 'Dosis', sans-serif;
+  font-size: var(--h2-font);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.sobre-texto p {
+  font-size: var(--p-font);
+  line-height: 30px;
+  margin-bottom: 3rem;
 }
