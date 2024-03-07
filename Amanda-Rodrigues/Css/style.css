@@ -101,19 +101,19 @@ section {
 
 .home {
     position: relative;
-    min-height: 100vh;
-    width: 100%;
     background-size: cover; /* Torna a imagem de fundo responsiva */
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: -300px; /* Move o conteúdo para cima */
-    margin-bottom: 7%;
-
+    margin-top: -25%;
 
 }
-
+@media screen and (max-width: 768px) {
+  .hero-text {
+      text-align: center; /* Centraliza o texto quando a tela for menor */
+  }
+}
 
 .hero-text h3 {
     color: var(--second-color);
@@ -166,6 +166,7 @@ header.sticky{
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     align-items: center;
     gap: 4rem;
+
 }
 
 .sobre-texto h5{
@@ -191,7 +192,7 @@ span{
     color: var(--other-color);
     font-size: var(--p-font);
     line-height: 30px;
-    margin-bottom: 3rem;
+    margin-bottom: 2%;
 }
 
 
@@ -346,7 +347,8 @@ span{
     margin: 50px;
     padding: 50px;
     display:flex;
-    margin-top: 300px; /* Move o conteúdo para cima */
+    margin-bottom: 50%;
+
 
   }
   .footer li {
@@ -1035,7 +1037,8 @@ span{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 200px; /* Move o conteúdo para cima */
+  margin-bottom: 20%;
+  
 
   
 }
@@ -1045,6 +1048,8 @@ span{
   color: #fff;
   margin: 25px;
   font-family: 'Dosis', sans-serif;
+  margin-bottom: 40px; /* Define a margem inferior de 20 pixels */
+
 
 }
 .content-box{
@@ -1053,6 +1058,7 @@ span{
   flex-wrap: wrap;
   width: 1000px;
   margin-top: 30px;
+  margin-bottom: 40px; /* Define a margem inferior de 20 pixels */
 }
 .card{
   min-height: 220px;
@@ -1067,6 +1073,7 @@ span{
   opacity: 10;
   margin: 10px 4px;
   box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+  
 }
 .card i{
   margin: 20px;
@@ -1133,6 +1140,7 @@ span{
 @media(max-width:991px){
   .wrapper{
       padding: 25px;
+      margin-bottom: 100px; /* Define a margem inferior de 20 pixels */
   }
   .wrapper h1{
       font-size: 2.5em;
@@ -1160,6 +1168,7 @@ span{
   align-items: center;
   margin-left: 40%; /* Margem esquerda ajustada para centralizar */
   margin-top: 0%;
+  margin-bottom: 200px; /* Define a margem inferior de 20 pixels */
 }
 
 .image-container {
@@ -1235,12 +1244,15 @@ span{
   }
 }
 
+
+
 .sobre {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Divide a largura em duas colunas */
   align-items: center;
   gap: 4rem;
-  margin-bottom: 30px; /* Adiciona espaço abaixo do texto */
+  margin-bottom: 50px; /* Adiciona espaço abaixo do texto */
+  margin-top: 10%;
 }
 
 .ring {
@@ -1269,6 +1281,7 @@ span{
 .sobre-texto {
   color: #fff;
   margin-bottom: 30px; /* Adiciona espaço abaixo do texto */
+  margin-bottom: auto;
 }
 
 .sobre-texto h2 {
@@ -1282,4 +1295,72 @@ span{
   font-size: var(--p-font);
   line-height: 30px;
   margin-bottom: 3rem;
+}
+
+
+
+.container {
+  margin-top: 50px; /* Espaçamento superior */
+  margin-bottom: 50px; /* Espaçamento inferior */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.cardp {
+  width: 200px;
+  height: 300px;
+  margin-right: 20px; /* Espaçamento entre os cartões */
+  margin-bottom: 20px; /* Espaçamento entre as linhas de cartões */
+  perspective: 800px;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: all 1s;
+  border: 2px solid #03fa6e;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.front {
+  background-color: #03fa6e;
+  color: #fff;
+}
+
+.back {
+  background-color: #272727;
+  transform: rotateY(-180deg);
+}
+
+.cardp:hover .front {
+  transform: rotateY(180deg);
+}
+
+.cardp:hover .back {
+  transform: rotateY(0);
+}
+@media screen and (max-width: 600px) {
+  .container {
+    margin-top: 20px; /* Reduz a margem superior */
+    margin-bottom: 20px; /* Reduz a margem inferior */
+  }
+
+  .row {
+    flex-direction: column; /* Altera a direção dos cartões para coluna */
+    align-items: center; /* Centraliza os cartões na horizontal */
+  }
+
 }
