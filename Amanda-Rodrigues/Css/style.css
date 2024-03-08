@@ -1263,12 +1263,15 @@ span{
 /* Adicione estas regras dentro da media query para estilos responsivos */
 @media screen and (max-width: 768px) {
   .pic {
-    width: 80%; /* Reduz a largura para 80% da largura do viewport */
-    max-width: 100%; /* Define a largura máxima como 100% para que a imagem se ajuste à largura do contêiner pai */
-    height:auto; /* Permite que a altura se ajuste automaticamente conforme a largura */
-    left: 10%; /* Mantém o elemento centralizado horizontalmente */
-    transform: translateX(-50%) translateY(-50%); /* Centraliza completamente o elemento */
-    top: 110%;
+    width: 160%; /* Reduz a largura para 80% da largura do viewport */
+    max-width: 300px; /* Define uma largura máxima de 300 pixels para evitar que o card fique muito largo */
+    height: auto; /* Permite que a altura se ajuste automaticamente conforme a largura */
+    position: relative; /* Altera para posição relativa para manter o card no fluxo do documento */
+    left: -30%; /* Remove o valor de posicionamento à esquerda */
+    transform: none; /* Remove a transformação */
+    top: auto; /* Remove o valor de posicionamento superior */
+    margin: 40px auto; /* Adiciona margem para alinhar verticalmente */
+    margin-top: 210%;
   }
 
   .pic .content {
