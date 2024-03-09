@@ -1212,14 +1212,15 @@ span{
   width: 350px;
   background: #b800f06b;
   position:absolute;
-  margin-top: 24%;
+  margin-top: 45%;
   transform: translateY(-50%);
   opacity: 18;
   animation: display 10s infinite;
   left: 38%;
 }
-.pic h1{
-  
+.pic img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do card */
+  height: auto; /* Mantém a proporção da imagem */
 }
 
 .pic .content{
@@ -1273,7 +1274,7 @@ span{
     transform: none; /* Remove a transformação */
     top: auto; /* Remove o valor de posicionamento superior */
     margin: 40px auto; /* Adiciona margem para alinhar verticalmente */
-    margin-top: 210%;
+    margin-top: 370%;
   }
 
   .pic .content {
@@ -1290,6 +1291,7 @@ span{
  background-color:#b800f06b; 
  color:#fff; 
  font-size:0.875em; 
+ margin-top: 30%;
 }
 
 .main_footer .content { float:left; width:90%; margin:0 5%; padding: 5em 0; }
@@ -1452,7 +1454,7 @@ span{
 /*768PX BREAKPOINT*/
 @media (min-width:48em){
 
-.colfooter  { width:30%; margin-right:5%; margin-bottom:0; }
+.colfooter  { width:30%; margin-right:-51%; margin-bottom:0; }
 .colfooter:nth-of-type(3n+0){ margin-right:0; border-right:0;}
 
 }
